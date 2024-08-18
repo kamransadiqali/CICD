@@ -1,0 +1,27 @@
+name: Continuous Integration/Continuous Delivery
+on: push
+
+jobs:
+ first_job:
+  name: Development
+  runs-on: ubuntu-latest
+  steps:
+  - name: Greet the user
+    run: echo "This is Development Phase"
+    shell: bash
+ second_job:
+  needs: [first_job]
+  name: Testing
+  runs-on: ubuntu-latest
+  steps:
+  - name: Greet the user
+    run: echo "This is Testing Phase"
+    shell: bash
+ third_job:
+  needs: [second_job]
+  name: Deployment
+  runs-on: ubuntu-latest
+  steps:
+  - name: Greet the user
+    run: echo "This is Deployement Phase"
+    shell: bash
