@@ -25,5 +25,5 @@ jobs:
   - name: Greet the user
     run: |
         echo "This is Deployement Phase"
-        echo "Hello World from ${{ github.action }}"
+        echo "Hello World from ${{ github.actor }} "
     shell: bash
