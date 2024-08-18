@@ -23,5 +23,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Greet the user
-    run: echo "This is Deployement Phase"
+    run: |
+        echo "This is Deployement Phase"
+        echo "Hello World from ${{ github.action }}"
     shell: bash
